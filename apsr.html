@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marked Rectangles on Images</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .image-container {
+            position: relative;
+            display: none;
+            margin-bottom: 20px;
+        }
+        .image-container.active {
+            display: inline-block;
+        }
+        .image-container canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .button {
+            position: absolute;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: darkgreen;
+        }
+        @keyframes popInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .animated-rectangle {
+            animation: popInOut 2s infinite;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qlik Academic Program Application Navigation</h1>
+    <div>
+        <div class="image-container active" id="image_0">
+            <img src="images/1.jpg" alt="1.jpg">
+            <canvas id="canvas_1.jpg" width="1240" height="796"></canvas>
+            <button class="button" style="left: 50px; top: 20%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 70px; top: 20%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_1.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(187, 143);
+            ctx.lineTo(715, 143);
+            ctx.lineTo(715, 256);
+            ctx.lineTo(187, 256);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_1">
+            <img src="images/2.jpg" alt="2.jpg">
+            <canvas id="canvas_2.jpg" width="620" height="1386"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_2.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(10, 564);
+            ctx.lineTo(554, 564);
+            ctx.lineTo(554, 671);
+            ctx.lineTo(10, 671);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_2">
+            <img src="images/3.jpg" alt="3.jpg">
+            <canvas id="canvas_3.jpg" width="620" height="1315"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_3.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(40, 870);
+            ctx.lineTo(366, 870);
+            ctx.lineTo(366, 930);
+            ctx.lineTo(40, 930);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_3">
+            <img src="images/4-1.jpg" alt="4-1.jpg">
+            <canvas id="canvas_4-1.jpg" width="620" height="1333"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_4-1.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(230, 654);
+            ctx.lineTo(386, 654);
+            ctx.lineTo(386, 696);
+            ctx.lineTo(230, 696);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_4">
+            <img src="images/4.png" alt="4.png">
+            <canvas id="canvas_4.png" width="722" height="699"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_4.png');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(132, 174);
+            ctx.lineTo(559, 174);
+            ctx.lineTo(559, 543);
+            ctx.lineTo(132, 543);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_5">
+            <img src="images/5.png" alt="5.png">
+            <canvas id="canvas_5.png" width="641" height="556"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_5.png');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(202, 377);
+            ctx.lineTo(394, 377);
+            ctx.lineTo(394, 462);
+            ctx.lineTo(202, 462);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_6">
+            <img src="images/6-1.jpg" alt="6-1.jpg">
+            <canvas id="canvas_6-1.jpg" width="620" height="1323"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_6-1.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(183, 649);
+            ctx.lineTo(446, 649);
+            ctx.lineTo(446, 755);
+            ctx.lineTo(183, 755);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_7">
+            <img src="images/6-2.jpg" alt="6-2.jpg">
+            <canvas id="canvas_6-2.jpg" width="620" height="1337"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_6-2.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(183, 700);
+            ctx.lineTo(446, 700);
+            ctx.lineTo(446, 807);
+            ctx.lineTo(183, 807);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_8">
+            <img src="images/6-3.jpg" alt="6-3.jpg">
+            <canvas id="canvas_6-3.jpg" width="620" height="1323"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_6-3.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(204, 721);
+            ctx.lineTo(452, 721);
+            ctx.lineTo(452, 831);
+            ctx.lineTo(204, 831);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_9">
+            <img src="images/7.jpg" alt="7.jpg">
+            <canvas id="canvas_7.jpg" width="1240" height="920"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_7.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(608, 247);
+            ctx.lineTo(1160, 247);
+            ctx.lineTo(1160, 585);
+            ctx.lineTo(608, 585);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+
+        <div class="image-container" id="image_10">
+            <img src="images/7.png" alt="7.png">
+            <canvas id="canvas_7.png" width="638" height="1322"></canvas>
+            <button class="button" style="left: 50px; top: 50%;" onclick="showPrevImage()">Previous</button>
+            <button class="button" style="right: 50px; top: 50%;" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_7.png');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(187, 272);
+            ctx.lineTo(460, 272);
+            ctx.lineTo(460, 372);
+            ctx.lineTo(187, 372);
+            ctx.closePath();
+            ctx.stroke();
+            
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+            
+            animateRectangle();
+        </script>
+    </div>
+
+    <script>
+        var currentImage = 0;
+        var totalImages = document.querySelectorAll('.image-container').length;
+
+        function showNextImage() {
+            document.getElementById('image_' + currentImage).classList.remove('active');
+            currentImage = (currentImage + 1) % totalImages;
+            document.getElementById('image_' + currentImage).classList.add('active');
+        }
+
+        function showPrevImage() {
+            document.getElementById('image_' + currentImage).classList.remove('active');
+            currentImage = (currentImage - 1 + totalImages) % totalImages;
+            document.getElementById('image_' + currentImage).classList.add('active');
+        }
+    </script>
+</body>
+</html>

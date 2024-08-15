@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation for Data Literacy Certification</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .image-container {
+            position: relative;
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .image-container.active {
+            display: inline-block;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-container canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .button {
+            position: absolute;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: darkgreen;
+        }
+
+        .finish-button {
+            position: absolute;
+            text-decoration: none;
+            display: inline-block;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @keyframes popInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .animated-rectangle {
+            animation: popInOut 2s infinite;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            .finish-button {
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+
+            .finish-button {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Qlik Academic Program Application Navigation</h1>
+    <div>
+        <div class="image-container active" id="image_0">
+            <img src="images_qlik_exam/1.jpg" alt="1.jpg">
+            <canvas class="image-canvas" id="canvas_1.jpg" width="1240" height="1041"></canvas>
+            <button class="button prev-button" id="prev-button-0" onclick="showPrevImage()">Previous</button>
+            <button class="button next-button" id="next-button-0" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_1.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(35, 768);
+            ctx.lineTo(205, 768);
+            ctx.lineTo(205, 828);
+            ctx.lineTo(35, 828);
+            ctx.closePath();
+            ctx.stroke();
+
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+
+            animateRectangle();
+
+            document.getElementById('prev-button-0').style.left = '20px';
+            document.getElementById('prev-button-0').style.top = '880px';
+            document.getElementById('next-button-0').style.left = '150px';
+            document.getElementById('next-button-0').style.top = '880px';
+        </script>
+
+        <!-- Repeat the above block for each image -->
+
+        <div class="image-container" id="image_1">
+            <img src="images_qlik_exam/2.jpg" alt="2.jpg">
+            <canvas class="image-canvas" id="canvas_2.jpg" width="963" height="1280"></canvas>
+            <button class="button prev-button" id="prev-button-1" onclick="showPrevImage()">Previous</button>
+            <button class="button next-button" id="next-button-1" onclick="showNextImage()">Next</button>
+        </div>
+        <script>
+            var canvas = document.getElementById('canvas_2.jpg');
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(832, 154);
+            ctx.lineTo(929, 154);
+            ctx.lineTo(929, 241);
+            ctx.lineTo(832, 241);
+            ctx.closePath();
+            ctx.stroke();
+
+            function animateRectangle() {
+                canvas.classList.add('animated-rectangle');
+            }
+
+            animateRectangle();
+
+            document.getElementById('prev-button-1').style.left = '20px';
+            document.getElementById('prev-button-1').style.top = '200px';
+            document.getElementById('next-button-1').style.left = '150px';
+            document.getElementById('next-button-1').style.top = '200px';
+        </script>
+
+        <!-- Add more image containers with their respective scripts -->
+
+    </div>
+    <script>
+        function showPrevImage() {
+            // Implement the logic to show the previous image
+        }
+
+        function showNextImage() {
+            // Implement the logic to show the next image
+        }
+    </script>
+</body>
+
+</html>
